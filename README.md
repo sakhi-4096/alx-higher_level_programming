@@ -4,7 +4,7 @@ Each file and folder in this repository represents an integral concept of progra
 ### Environment
 - OS: Ubuntu 20.04 LTS
 - Language: python3 (3.8.5) 
-- Style Guidlines: (Pycodestyle)[https://github.com/PyCQA/pycodestyle]
+- Style Guidlines: [Pycodestyle](https://github.com/PyCQA/pycodestyle)
 - Editor: vi, vim
 
 ### Author
