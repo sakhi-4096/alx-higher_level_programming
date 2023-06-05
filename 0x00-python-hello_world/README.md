@@ -12,7 +12,7 @@ Python is an easy to learn, powerful programming language. It has efficient high
  * How to use strings
  * What are indexing and slicing in Python
  * What is the official Python coding style and how to check your code with *pycodestyle*
-
+---
 0. Run Python file
  * Write a Shell script that runs a Python script.
  * The Python file name will be saved in the environment variable $PYFILE
@@ -93,7 +93,7 @@ Python is an easy to learn, powerful programming language. It has efficient high
  * Return: 0 if there is no cycle, 1 if there is a cycle
  Requirements:
  * Only these functions are allowed: *write, printf, putchar, puts, malloc, free*
-
+---
 ### Sources
  * [The Python Manual](https://docs.python.org/3/tutorial/index.html)
  * [Python f-strings](https://realpython.com/python-f-strings/)
