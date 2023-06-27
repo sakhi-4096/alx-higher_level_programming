@@ -6,16 +6,16 @@ In Python, exceptions are a way to handle errors or exceptional conditions that 
 Python provides a built-in hierarchy of exception classes, and you can also define your own custom exception classes.
 
 ## Features
- * Exception: The base class for all exceptions in Python.
- * SyntaxError: Raised when a syntax error is encountered.
- * TypeError: Raised when an operation or function is applied to an object of inappropriate type.
- * NameError: Raised when a local or global name is not found.
- * ValueError: Raised when a function receives an argument of the correct type but an inappropriate value.
- * IndexError: Raised when a sequence subscript is out of range.
- * KeyError: Raised when a dictionary key is not found.
- * FileNotFoundError: Raised when a file or directory is requested but cannot be found.
- * IOError: Raised when an input/output operation fails.
- * ZeroDivisionError: Raised when division or modulo by zero is performed.
+ * **Exception:** The base class for all exceptions in Python.
+ * **SyntaxError:** Raised when a syntax error is encountered.
+ * **TypeError:** Raised when an operation or function is applied to an object of inappropriate type.
+ * **NameError:** Raised when a local or global name is not found.
+ * **ValueError:** Raised when a function receives an argument of the correct type but an inappropriate value.
+ * **IndexError:** Raised when a sequence subscript is out of range.
+ * **KeyError:** Raised when a dictionary key is not found.
+ * **FileNotFoundError:** Raised when a file or directory is requested but cannot be found.
+ * **IOError:** Raised when an input/output operation fails.
+ * **ZeroDivisionError:** Raised when division or modulo by zero is performed.
 
 ## Usage
 ```python
