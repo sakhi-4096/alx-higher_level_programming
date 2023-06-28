@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module 6-square
 Defines class Square with private attributes and public methods
