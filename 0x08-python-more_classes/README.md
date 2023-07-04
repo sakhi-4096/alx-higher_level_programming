@@ -1,4 +1,4 @@
-# Python - Classes and Objects 
+# Python - More Classes
 Classes and objects are used to implement object-oriented programming (OOP) concepts.
 ![Object Oriented Programming](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/247/oop-meme.jpg)
 
