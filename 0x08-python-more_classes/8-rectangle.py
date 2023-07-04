@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """
-Module 9-rectangle
 Contains class rectangle with private instance attributes and
 public instance methods, string representation and instance
 deletion and public class attributes and compare rectangles
-and returns a square
 """
 
 
@@ -126,18 +124,6 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_2.area() > rect_1.area():
-            return rect_2
-        return rect_1
-
-    @classmethod
-    def square(cls, size=0):
-        """
-        Creates a new rectangle instance with equal width and height.
-
-        Args:
-            size (int): The size of the square. Defaults to 0.
-        Returns:
-            Rectangle: A new rectangle instance with equal width and height.
-        """
-        return cls(size, size)
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
