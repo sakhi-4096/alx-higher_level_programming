@@ -6,6 +6,7 @@ public instance methods, string representation and instance
 deletion and public class attribute
 """
 
+
 class Rectangle:
     """
     Represents a rectangle with a width and height,
