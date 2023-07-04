@@ -5,6 +5,7 @@ Contains class rectangle with private instance attributes and
 public instance methods
 """
 
+
 class Rectangle:
     """
     Represents a rectangle with a width and height,
