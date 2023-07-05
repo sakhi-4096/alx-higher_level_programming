@@ -43,5 +43,7 @@ my_car.start_engine()  # Output: Engine started!
  * [9.11. Aliasing](https://www.openbookproject.net/thinkcs/python/english2e/ch09.html#aliasing)
  * [9.10. Objects and values](https://www.openbookproject.net/thinkcs/python/english2e/ch09.html#objects-and-values)
 
+![Mind blown](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/70f9ea0e969dfcc407a7427aba4786d87a920494.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230705%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230705T203508Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e5e1cf1b4dd80be411f4d6497cb651c17c9bed0cd8bd8a30dee356f745a8bbed)
+
 ## Contact
  * [Sakhile Ndlazi](https://www.twitter.com/sakhilelindah)
