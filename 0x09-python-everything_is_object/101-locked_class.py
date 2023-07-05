@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
 """
-Defines a class that restricts the creation of new instance attributes dynamically.
+Defines a class that restricts the creation of new instance
+attributes dynamically.
 Only the attribute "first_name" is allowed.
 """
+
 
 class LockedClass:
     """
