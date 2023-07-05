@@ -14,6 +14,7 @@ In Python, everything is an object. This means that all data values, including n
  * **First-Class Functions:** In Python, functions are treated as first-class objects, which means they can be assigned to variables, passed as arguments to other functions, returned as values from functions, and stored in data structures. This feature enables functional programming paradigms in Python.
  * **Higher-Order Functions:** Python supports higher-order functions, which are functions that can take other functions as arguments or return functions as results. This functional programming concept allows for writing more concise and expressive code, enabling techniques like function composition and closures.
  * **Object Serialization and Persistence:** Python provides built-in support for object serialization (pickling) and deserialization, allowing you to convert objects into a byte stream that can be stored or transmitted. This feature enables object persistence, interprocess communication, and data exchange between different systems.
+
 ![Python bat](https://media.giphy.com/media/wAjfQ9MLUfFjq/giphy.gif)
 
 ## Usage
