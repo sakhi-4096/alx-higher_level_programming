@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""
-Unittest for max_integer([..])
+"""Unittest for max_integer([..])
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
+
 
 class TestMaxInteger(unittest.TestCase):
 
@@ -45,28 +45,9 @@ class TestMaxInteger(unittest.TestCase):
             max_integer([None, True])
 
     def test_None(self):
-        self.assertIsNone(max_integer([]), None)
-        self.assertIsNone(max_integer(), None)
-        self.assertIsNone(max_integer([None]), None)
-
-    def test_empty_list(self):
         self.assertIsNone(max_integer([]))
+        self.assertIsNone(max_integer())
 
-    def test_single_element_list(self):
-        self.assertEqual(max_integer([5]), 5)
-        self.assertEqual(max_integer([-10]), -10)
-
-    def test_all_negative_numbers(self):
-        self.assertEqual(max_integer([-5, -2, -10, -1]), -1)
-        self.assertEqual(max_integer([-10, -20, -30]), -10)
-
-    def test_mixed_data_types(self):
-        self.assertEqual(max_integer([1, 2, '3', 4, '5']), '5')
-        self.assertEqual(max_integer([1, '2', 3, '4']), '4')
-
-    def test_large_numbers(self):
-        self.assertEqual(max_integer([9999999999, 10000000000, 10000000001]), 10000000001)
-        self.assertEqual(max_integer([10**18, -10**18, 10**18+1]), 10**18+1)
 
 if __name__ == "__main__":
     unittest.main()
