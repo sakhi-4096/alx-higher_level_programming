@@ -33,16 +33,16 @@ def matrix_mul(m_a, m_b):
         if len(eachrow) != len(m_b[0]):
             raise TypeError("each row of m_b must should be of the same size")
 
-    l = []
+    lst = []
     new_matrix = []
     n = 0
     for rowA in range(len(m_a)):
-        l = []
+        lst = []
         for colB in range(len(m_b[0])):
             for i in range(len(m_a[0])):
                 n += m_a[rowA][i] * m_b[i][colB]
-            l.append(n)
+            lst.append(n)
             n = 0
-        new_matrix.append(l)
+        new_matrix.append(lst)
 
     return new_matrix
