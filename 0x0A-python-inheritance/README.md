@@ -1,4 +1,4 @@
-# Python - Everything is an Object
+# Python - Inheritance 
 Inheritance is a fundamental concept in object-oriented programming and plays a crucial role in creating modular, extensible, and maintainable code.
 
 ## Description
