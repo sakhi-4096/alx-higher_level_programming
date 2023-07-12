@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 3-write_file
+Module 1-write_file
 Contains a function that writes text to a file and returns the
 number of characters written.
 """
@@ -15,10 +15,6 @@ def write_file(filename="", text=""):
 
     Returns:
         - int: The number of characters written.
-
-    Raises:
-        - IOError: If there is an error writing to the file.
-
     """
     with open(filename, mode="w", encoding="utf-8") as file:
         return file.write(text)
