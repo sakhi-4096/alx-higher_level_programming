@@ -5,6 +5,7 @@ Module 12-pascal_triangle
 Contains function that returns int lists of pascal triangle of any given size
 """
 
+
 def pascal_triangle(n):
     """
     Return a list of integer lists representing Pascal's triangle of size n.
