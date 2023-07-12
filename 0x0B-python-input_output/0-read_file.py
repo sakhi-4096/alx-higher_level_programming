@@ -13,14 +13,6 @@ def read_file(filename=""):
 
     Returns:
         - None
-    Raises:
-        - FileNotFoundError: If the file does not exist.
-        - IOError: If there is an error reading the file.
     """
-    try:
-        with open(filename, mode="r", encoding="utf-8") as file:
-            print(file.read(), end="")
-    except FileNotFoundError:
-        print("Error: File not found.")
-    except IOError:
-        print("Error: Unable to read the file.")
+    with open(filename, mode="r", encoding="utf-8") as file:
+        print(file.read(), end="")
