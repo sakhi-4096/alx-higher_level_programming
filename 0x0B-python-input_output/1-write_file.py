@@ -20,9 +20,5 @@ def write_file(filename="", text=""):
         - IOError: If there is an error writing to the file.
 
     """
-    try:
-        with open(filename, mode="w", encoding="utf-8") as file:
-            return file.write(text)
-    except IOError:
-        print("Error: Unable to write to the file.")
-        return 0
+    with open(filename, mode="w", encoding="utf-8") as file:
+        return file.write(text)
