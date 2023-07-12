@@ -14,12 +14,6 @@ def append_write(filename="", text=""):
         - text (str): The text to append to the file.
     Returns:
         - int: The number of characters added.
-    Raises:
-        - IOError: If there is an error appending to the file.
     """
-    try:
-        with open(filename, mode="a", encoding="utf-8") as file:
-            return file.write(text)
-    except IOError:
-        print("Error: Unable to append to the file.")
-        return 0
+    with open(filename, mode="a", encoding="utf-8") as file:
+        return file.write(text)
