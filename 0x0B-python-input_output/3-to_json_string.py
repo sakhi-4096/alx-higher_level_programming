@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 5-to_json_string
+Module 3-to_json_string
 Contains a function that returns the JSON representation of a Python object
 as a string.
 """
