@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 4-append_write
+Module 22-append_write
 Contains a function that appends text to a file and returns the
 number of characters added.
 """
