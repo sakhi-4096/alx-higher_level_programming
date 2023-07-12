@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 7-save_to_json_file
+Module 5-save_to_json_file
 Contains a function that writes a Python object to a file using
 JSON representation.
 """
