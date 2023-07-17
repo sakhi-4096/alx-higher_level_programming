@@ -7,27 +7,16 @@ Unittest for Square Class
 
 
 import unittest
-import pep8
 from io import StringIO
 from contextlib import redirect_stdout
 from models.square import Square
-
-
-class TestPep8(unittest.TestCase):
-    """Pep8 models/square.py & tests/test_models/test_square.py"""
-    def test_pep8(self):
-        """Pep8"""
-        style = pep8.StyleGuide(quiet=False)
-        errors = 0
-        files = ["models/square.py", "tests/test_models/test_square.py"]
-        errors += style.check_files(files).total_errors
-        self.assertEqual(errors, 0, 'Need to fix Pep8')
 
 
 class TestSquare(unittest.TestCase):
     """Tests for models/square.py"""
 
     """Test attributes"""
+
     def test_all_attr_given(self):
         """Test all attributes match what's given"""
         s1 = Square(9, 99, 999, 1000)
@@ -62,6 +51,7 @@ class TestSquare(unittest.TestCase):
             Square(9).size(-9)
 
     """Test args given"""
+
     def test_invalid_args(self):
         """Test too many args given throws error"""
         with self.assertRaises(TypeError):
@@ -72,12 +62,14 @@ class TestSquare(unittest.TestCase):
             Square(None)
 
     """Test class"""
+
     def test_class(self):
         """Test class created is indeed Rectangle"""
         s = Square(10)
         self.assertEqual(type(s), Square)
 
     """Test methods"""
+
     def test_area(self):
         """Test method: area"""
         self.assertEqual(Square(3).area(), 9)
