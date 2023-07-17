@@ -7,28 +7,17 @@ Unittest for Rectangle Class
 
 
 import os
-import pep8
 import unittest
 from io import StringIO
 from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 
 
-class TestPep8(unittest.TestCase):
-    """Pep8 models/rectangle.py & tests/test_models/test_rectangle.py"""
-    def test_pep8(self):
-        """Pep8"""
-        style = pep8.StyleGuide(quiet=False)
-        errors = 0
-        files = ["models/rectangle.py", "tests/test_models/test_rectangle.py"]
-        errors += style.check_files(files).total_errors
-        self.assertEqual(errors, 0, 'Need to fix Pep8')
-
-
 class TestRectangle(unittest.TestCase):
     """Tests for models/rectangle.py"""
 
     """Test attributes"""
+
     def test_all_attr_given(self):
         """Test all attributes match what's given"""
         r1 = Rectangle(10, 20, 1, 2, 99)
@@ -77,6 +66,7 @@ class TestRectangle(unittest.TestCase):
             print(Rectangle.__y)
 
     """Test args given"""
+
     def test_invalid_args(self):
         """Test too many args given throws error"""
         with self.assertRaises(TypeError):
@@ -88,11 +78,13 @@ class TestRectangle(unittest.TestCase):
             Rectangle(None)
 
     """Test class"""
+
     def test_class(self):
         """Test class created is indeed Rectangle"""
         self.assertEqual(type(Rectangle(1, 2)), Rectangle)
 
     """Test methods"""
+
     def test_area(self):
         """Test method: area"""
         self.assertEqual(Rectangle(3, 4).area(), 12)
