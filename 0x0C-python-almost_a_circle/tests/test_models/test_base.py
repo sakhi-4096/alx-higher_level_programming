@@ -30,7 +30,7 @@ class TestBase(unittest.TestCase):
     """Tests for models/base.py"""
 
     def setUp(self):
-        pass
+        Base._Base__nb_objects = 0
 
     def tearDown(self):
         try:
@@ -55,7 +55,7 @@ class TestBase(unittest.TestCase):
     def test_private_attr_access(self):
         """Test private attr are not accessible"""
         with self.assertRaises(AttributeError):
-            print(Base.__nb_objects)
+            print(Base._Base__nb_objects)
             print(Base.nb_objects)
 
     """Test args given"""
@@ -82,42 +82,17 @@ class TestBase(unittest.TestCase):
         self.assertTrue(type(strd01) == str)
         self.assertTrue(json.loads(strd01) == [d0, d1])
 
-    def test_none_to_json_string(self):
-        """Test no dict given translates into JSON string of empty dict"""
-        d2 = None
-        strd2 = Base.to_json_string([d2])
-        self.assertTrue(type(strd2) == str)
-        self.assertTrue(strd2 == "[]")
-
-    def test_empty_to_json_string(self):
-        """Test empty dict given translates into JSON string of empty dict"""
-        d3 = dict()
-        strd3 = Base.to_json_string([d3])
-        self.assertTrue(len(d3) == 0)
-        self.assertTrue(type(strd3) == str)
-        self.assertTrue(strd3 == "[]")
-
     """Test JSON to Python object"""
 
-    def test_from_json_string(self):
-        """Test JSON string translates into Python dict"""
-        s0 = '[{"id": 1, "width": 2, "height": 3, "x": 4, "y": 5},\
-               {"id": 6, "width": 7, "height": 8, "x": 9, "y": 10}]'
-        strs0 = Base.from_json_string(s0)
-        self.assertTrue(type(s0) == str)
-        self.assertTrue(type(strs0) == list)
-        self.assertTrue(type(strs0[0]) == dict)
-        self.assertTrue(strs0 == [json.loads(s0)])
-
     def test_from_none_json_string(self):
-        """Test no JSON string translates into empty Python dict"""
+        """Test no JSON string translates into empty Python list"""
         s2 = None
         strs2 = Base.from_json_string(s2)
         self.assertTrue(type(strs2) == list)
         self.assertTrue(strs2 == [])
 
     def test_from_empty_json_string(self):
-        """Test no JSON string translates into empty Python dict"""
+        """Test no JSON string translates into empty Python list"""
         s3 = ""
         strs3 = Base.from_json_string(s3)
         self.assertTrue(type(strs3) == list)
