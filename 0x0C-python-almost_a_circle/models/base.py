@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Base class for models."""
+
 
 import json
 import csv
