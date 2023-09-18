@@ -40,9 +40,5 @@ def list_states_with_N(username, password, database_name):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python 1-filter_states.py <username> <password> <database_name>")
-        sys.exit(1)
-
     username, password, database_name = sys.argv[1], sys.argv[2], sys.argv[3]
     list_states_with_N(username, password, database_name)

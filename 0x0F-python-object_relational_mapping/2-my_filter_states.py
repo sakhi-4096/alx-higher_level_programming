@@ -9,40 +9,33 @@ import sys
 
 
 def search_states(username, password, database_name, state_name):
-    try:
-        # Connnect ot the MySQL server
-        connection = MySQLdb.connect(
-            user=username,
-            password=password,
-            host='localhost'
-            port=3306,
-            database=database_name
-        )
+    # Connnect ot the MySQL server
+    connection = MySQLdb.connect(
+        user=username,
+        password=password,
+        host='localhost'
+        port=3306,
+        database=database_name
+    )
 
-        # Create a cursor object to interact with the database
-        cursor = connection.cursor()
+    # Create a cursor object to interact with the database
+    cursor = connection.cursor()
 
-        # Prepare the SQL query with the  user input with the database
-        query = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
-        cursor.execute(query, (state_name,))
+    # Prepare the SQL query with the  user input with the database
+    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
+    cursor.execute(query, (state_name,))
 
-        # Feetch all the rows and display them
-        states = cursor.fetchall()
-        for state in states:
-            print(state)
+    # Feetch all the rows and display them
+    states = cursor.fetchall()
+    for state in states:
+        print(state)
 
-    except MySQLdb.Error as e:
-        print("MySQL Error:", e)
-    finally:
-        # Close the cursor and connection
-        cursor.close()
-        connection.close()
+    # Close the cursor and connection
+    cursor.close()
+    connection.close()
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: python script.py <username> <password> <database_name> <state_name>")
-        sys.exit(1)
-
-    username, password, database_name, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    username, password, database_name, state_name =
+    sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
     search_states(username, password, database_name, state_name)
