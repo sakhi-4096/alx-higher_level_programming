@@ -7,39 +7,32 @@ import MySQLdb
 from sys import argv
 
 
-def list_cities(username, password, database_name):
-    try:
-        # Connect to the MySQL server
-        connection = MySQLdb.connect(
-            user=username,
-            password=password,
-            host='locahost',
-            port=3306,
-            database=database_name
-        )
-
-        # Create a cursor object to interact with the database
-        cursor = connection.cursor()
-
-        # Define the SQL query to retrieve all cities sorted by cities.id
-        query = "SELECT * FROM cities ORDER BY cities.id"
-
-        # Execute the query
-        cursor.execute(query)
-
-        # Fetch all the rows and display them
-        cities = cursor.fetchall()
-        for city in cities:
-            print(city)
-
-    except MySQLdb.Error as e:
-        print("MySQL Error:", e)
-    finally:
-        # Close the cursor and connection
-        cursor.close()
-        connection.close()
-
-
 if __name__ == "__main__":
-    username, password, database_name = argv[1], argv[2], argv[3]
-    list_cities(username, password, database_name)
+    # Connect to the MySQL server
+    connection = MySQLdb.connect(
+        user=argv[1],
+        passwd=argv[2],
+        host='localhost',
+        port=3306,
+        db=argv[3]
+    )
+
+    #  Create a cursor object to interact with the database
+    cursor = connection.cursor()
+
+    # Define SQL query with a parameterized query to retriev cities by state
+    query = "SELECT cities.id, cities.name, states.name FROM cities \
+            INNER JOIN states ON cities.states_id = states.id \
+            ORDER BY cities.id ASC"
+
+    # Execute the query with state_name parameter
+    cursor.execute(query)
+
+    # Fetch all rows and display them
+    cities = cursor.fetchall()
+    for city in cities:
+        print(city)
+
+    # Close the cursor and connection
+    cursor.close()
+    connection.close()
