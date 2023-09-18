@@ -41,9 +41,5 @@ def list_cities(username, password, database_name):
 
 
 if __name__ == "__main__":
-    if len(argv) != 4:
-        print("Usage: python 4-cities_by_state.py <username> <password> <database_name>")
-        sys.exit(1)
-
     username, password, database_name = argv[1], argv[2], argv[3]
     list_cities(username, password, database_name)
