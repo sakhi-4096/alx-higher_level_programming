@@ -19,7 +19,7 @@ def list_states(username, password, database_name):
     cursor = connection.cursor()
 
     # Execute the SQL query to retreive states sorted by states.id
-    cursor.execute("SELCT * FROM states ORDER BY states.id")
+    cursor.execute("SELCT * FROM states ORDER BY states.id ASC")
 
     # Fetch all the rows and display them
     states = cursor.fetchall()
