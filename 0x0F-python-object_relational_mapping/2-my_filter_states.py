@@ -9,23 +9,23 @@ import sys
 
 
 def search_states(username, password, database_name, state_name):
-    # Connnect ot the MySQL server
+    # Connect to the MySQL server
     connection = MySQLdb.connect(
         user=username,
-        password=password,
-        host='localhost'
+        passwd=password,
+        host='localhost',
         port=3306,
-        database=database_name
+        db=database_name
     )
 
     # Create a cursor object to interact with the database
     cursor = connection.cursor()
 
-    # Prepare the SQL query with the  user input with the database
-    query = "SELECT * FROM states WHERE name = %s ORDER BY states.id"
+    # Prepare the SQL query with the user input and execute it
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id"
     cursor.execute(query, (state_name,))
 
-    # Feetch all the rows and display them
+    # Fetch all the rows and display them
     states = cursor.fetchall()
     for state in states:
         print(state)
@@ -36,6 +36,6 @@ def search_states(username, password, database_name, state_name):
 
 
 if __name__ == "__main__":
-    username, password, database_name, state_name =
-    sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    username, password, database_name, state_name = sys.argv[
+        1], sys.argv[2], sys.argv[3], sys.argv[4]
     search_states(username, password, database_name, state_name)
