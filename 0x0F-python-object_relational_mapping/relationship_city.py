@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines the City class, representing the cities table in the database.
+This module defines the City class, representing the cities table
+in the database.
 """
 
 from sqlalchemy import Column, Integer, String, ForeignKey

@@ -12,11 +12,20 @@ Base = declarative_base()
 
 
 class State(Base):
+    """
+    State class that inherits from Base
+
+    Attributes:
+        id: Id state
+        name: Name of state
+    """
     # Set the table name in the database
     __tablename__ = "states"
 
-    # Define the 'id' column, which is an auto-generated unique integer, primary key and can't be null
-    id = Column(Integer, primary_key=True, nullable=False)
+    # Define the 'id' column, which is an auto-generated unique integer,
+    # primary key and can't be null
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
 
-    # Define the 'name' column, which is a string with a maximum of 128 characters and can't be null
+    # Define the 'name' column, which is a string with a maximum of 128
+    # characters and can't be null
     name = Column(String(128), nullable=False)

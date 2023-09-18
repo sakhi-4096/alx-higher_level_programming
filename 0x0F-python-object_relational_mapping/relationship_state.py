@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines the State class, representing the states table in the database.
+This module defines the State class, representing the states table
+in the database.
 """
 
 from sqlalchemy import Column, Integer, String, text
