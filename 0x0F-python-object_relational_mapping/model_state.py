@@ -13,7 +13,7 @@ Base = declarative_base()
 
 class State(Base):
     # Set the table name in the database
-    __tablename__ = 'states'
+    __tablename__ = "states"
 
     # Define the 'id' column, which is an auto-generated unique integer, primary key and can't be null
     id = Column(Integer, primary_key=True, nullable=False)
