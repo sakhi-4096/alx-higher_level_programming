@@ -22,8 +22,9 @@ def search_states(username, password, database_name, state_name):
     cursor = connection.cursor()
 
     # Prepare the SQL query with the user input and execute it
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id"
-    cursor.execute(query, (state_name,))
+    query = """SELECT * FROM states
+                WHERE name LIKE '{:s}' ORDER BY id ASC""".format(argv[4])
+    cursor.execute(query)
 
     # Fetch all the rows and display them
     states = cursor.fetchall()
