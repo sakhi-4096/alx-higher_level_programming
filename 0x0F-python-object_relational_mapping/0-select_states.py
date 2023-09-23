@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # create a cursor object to interact with the database
     cursor = connection.cursor()
     # execute the SQL query to retreive states sorted by states.id
-    cursor.execute("SELCT * FROM states ORDER BY states.id ASC")
+    cursor.execute("SELCT * FROM states ORDER BY id ASC")
 
     # fetch all the rows and display them
     states = cursor.fetchall()
