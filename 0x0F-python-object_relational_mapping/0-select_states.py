@@ -6,22 +6,22 @@ import MySQLdb
 from sys import argv
 
 
-def list_states(username, password, database_name):
-    # Connect to the MySQL server
+if __name__ == "__main__":
+    # connect to the MySQL server
     connection = MySQLdb.connect(
-        user=username,
-        password=password,
-        host='localhost',
+        host="localhost",
         port=3306,
-        database=database_name
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3]
     )
-    # Create a cursor object to interact with the database
-    cursor = connection.cursor()
 
-    # Execute the SQL query to retreive states sorted by states.id
+    # create a cursor object to interact with the database
+    cursor = connection.cursor()
+    # execute the SQL query to retreive states sorted by states.id
     cursor.execute("SELCT * FROM states ORDER BY states.id ASC")
 
-    # Fetch all the rows and display them
+    # fetch all the rows and display them
     states = cursor.fetchall()
     for state in states:
         print(state)
@@ -29,8 +29,3 @@ def list_states(username, password, database_name):
     # Close the cursor and connection
     cursor.close()
     connection.close()
-
-
-if __name__ == "__main__":
-    username, password, database_name = argv[1], argv[2], argv[3]
-    list_states(username, password, database_name)
