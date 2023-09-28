@@ -1,7 +1,7 @@
 # Python - Network #0
 Refers to the use of the Python programming language for tasks related to computer networking.
 
-![Networking](http://xkcd.com/353/)
+![Networking](https://imgs.xkcd.com/comics/python.png)
 
 ## Description
 * Computer networking involves the practice of connecting computers and other devices together to share data, resources, and services over a network, which can be a local network (e.g., within a home or office) or the global internet. Python provides a rich set of libraries and modules that make it well-suited for a wide range of networking tasks.
