@@ -14,4 +14,4 @@ if __name__ == "__main__":
     for i, commit in enumerate(commits[:10], start=1):
         sha = commit.get("sha")
         author = commit.get("commit").get("author").get("name")
-        print(f"Commit {i}: {sha} by {author}")
+        print(f"{sha}: {author}")
